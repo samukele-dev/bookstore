@@ -1,5 +1,6 @@
 # BookStore
 Program used by a clerk to manage a Bookstore (sqLite,Spacy-NLP)
+This can be applied a real world book store.
 
 The clerk is able to do the following:
 
