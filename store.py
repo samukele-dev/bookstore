@@ -35,7 +35,8 @@ def similarity(cursor, book_title):
     # iterate through list and compare title with book titles in database
     for i in range(0, cnt):
         # check similarity between the book title with with those in database
-        similarity_list.append(nlp(split_list[i][1]).similarity(model_sentence))
+        similarity_list.append(
+            nlp(split_list[i][1]).similarity(model_sentence))
 
     # get the maximum similarity value
     max_similarity = max(similarity_list)
@@ -52,7 +53,8 @@ def similarity(cursor, book_title):
 def populate_database(cursor):
     cursor.execute('''DROP TABLE IF EXISTS books''')
     # query for creating a table
-    cursor.execute('''CREATE TABLE books(id INTEGER PRIMARY KEY NOT NULL UNIQUE, Title TEXT,Author TEXT,Qty INTEGER)''')
+    cursor.execute(
+        '''CREATE TABLE books(id INTEGER PRIMARY KEY NOT NULL UNIQUE, Title TEXT,Author TEXT,Qty INTEGER)''')
     # Query to Populate records into the books table
     cursor.execute('''INSERT INTO books(id,Title,Author,Qty)VALUES(?,?,?,?)''',
                    (3001, "A Tale of Two Cities", "Charles Dickens", 30))
@@ -115,14 +117,17 @@ def update_book(cursor):
         if row[1].upper() == book_title.upper():
             # display the book that is found and being sold
             print("Book Found!! See Details Below:")
-            print('{:<20}{:<50}{:<20}{}'.format("ID", "Title", "Author", "Quantity"))
-            print('{:<20}{:<50}{:<20}{}'.format(row[0], row[1], row[2], row[3]))
+            print('{:<20}{:<50}{:<20}{}'.format(
+                "ID", "Title", "Author", "Quantity"))
+            print('{:<20}{:<50}{:<20}{}'.format(
+                row[0], row[1], row[2], row[3]))
             # get current quantity of books in inventory
             quantity = row[3]
             # remove one book from inventory
             updated_qty = quantity - 1
             # update Qty field with updated Qty number to show number of books left in the inventory
-            cursor.execute('''UPDATE books set Qty =? WHERE id =?''', (updated_qty, row[0]))
+            cursor.execute(
+                '''UPDATE books set Qty =? WHERE id =?''', (updated_qty, row[0]))
             # view updated table in database
             view_table(cursor)
             print("Book Sold!, Database updated!")
@@ -177,8 +182,10 @@ def search_book(cursor):
             # view updated table
             view_table(cursor)
             print("Book Found!! See Details Below:")
-            print('{:<20}{:<50}{:<20}{}'.format("ID", "Title", "Author", "Quantity"))
-            print('{:<20}{:<50}{:<20}{}'.format(row[0], row[1], row[2], row[3]))
+            print('{:<20}{:<50}{:<20}{}'.format(
+                "ID", "Title", "Author", "Quantity"))
+            print('{:<20}{:<50}{:<20}{}'.format(
+                row[0], row[1], row[2], row[3]))
             # break loop
             break
         else:

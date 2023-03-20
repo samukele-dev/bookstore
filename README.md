@@ -1,32 +1,24 @@
-# BookStore
-Program used by a clerk to manage a Bookstore (sqLite,Spacy-NLP)
-This can be applied a real world book store.
+# bookstore
+This is a python program that can be used by a bookstore clerk
+the importance of this program is to help the user or clerk to manage all their books in the bookstore
 
-The clerk is able to do the following:
+# The program allows the user clerk to:
+- add new books
+- update book information
+- delete books from the database
+- search the database to find specific book
 
-1. Add new books to the database
-2. Update book information
-3. Delete book from the database
-4. Search the database to find a specific book
-
-Database is called ebookstore and table called books should have the following fields:
+# the program has a database called ebookstore with a table named books that contains data on books with following fields:
 id,Title,Author,Qty
+# program should present the user with a Menu that has :
 
-The program provides the user with the following menu:
-1. Enter Book (using title of the book)
-2. Update Book
-3. Delete Book
-4. Search Books
-0. Exit
+- 1.Enter book
+- 2.Update book
+- 3.Delete book
+- 4.Search book
+- 0.Exit
 
-Artificial intelligence (NLP) concept using Spacy library has been added to the program to help recommend another book
-to the customer with similiar Title.
+# installation of the program
+git clone or download a zip folder with all the files and run the python script, ensure the database file is in the same directory as the python script.
 
-
-Usage:
-
-download a zip folder with all the files and run the python script, ensure the database file is in the same directory as the python script.
-
-
-
-
+# Usage of the program and how to use it
