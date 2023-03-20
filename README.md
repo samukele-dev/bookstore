@@ -21,5 +21,10 @@ id,Title,Author,Qty
 # installation & Usage of the program
 git clone or download a zip folder with all the files and run the python script, ensure the database file is in the same directory as the python script.
 
+![task2](https://user-images.githubusercontent.com/63036592/226271763-37f5cbd5-6924-493e-bece-1b066a09bbd1.PNG)
+
 # Credits
 https://github.com/molatosekgobela
+
+url - https://github.com/samukele-dev/bookstore
+
