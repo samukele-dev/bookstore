@@ -1,10 +1,5 @@
 # load sqlite3 library
 import sqlite3 as sql
-# import spacy library
-import spacy
-
-# This will return a Language object containing all components and data needed to process text.
-nlp = spacy.load('en_core_web_md')
 
 
 # display book with highest similarity in title as recommended book
