@@ -18,7 +18,8 @@ id,Title,Author,Qty
 - 4.Search book
 - 0.Exit
 
-# installation of the program
+# installation & Usage of the program
 git clone or download a zip folder with all the files and run the python script, ensure the database file is in the same directory as the python script.
 
-# Usage of the program and how to use it
+# Credits
+https://github.com/molatosekgobela
